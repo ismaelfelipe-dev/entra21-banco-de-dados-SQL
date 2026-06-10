@@ -87,10 +87,10 @@ FROM employees;
 
 -- exercise17 --
 SELECT CONCAT
-			(last_name, ', ', first_name) 					AS Funcionario,
-            job_id 											AS Cargo,
-            salary 											AS "Salário Mensal",
-            salary * 12 									AS "Salário Anual",
+			(last_name, ', ', first_name) 								AS Funcionario,
+            job_id 														AS Cargo,
+            salary 														AS "Salário Mensal",
+            salary * 12 												AS "Salário Anual",
             IFNULL(salary * 12 * commission_pct, 0) 					AS "Comissão Anual",
-            IFNULL((salary * 12) + (salary * 12 * commission_pct), 0) AS "Remuneração Anual Total"
+            IFNULL((salary * 12) + (salary * 12 * commission_pct), 0) 	AS "Remuneração Anual Total"
 FROM employees;
